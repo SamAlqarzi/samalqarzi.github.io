@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self';">
+    
+
+    <meta name="author" content="Salem Alqarzi">
+    <meta name="description" content="Building a whole database using MySqlWorkbench, loading data and run queries">
+    <meta name="keywords" content="blog,developer,personal, Portfolio">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 1: Database Structure and SQL Queries"/>
+<meta name="twitter:description" content="Building a whole database using MySqlWorkbench, loading data and run queries"/>
+
+    <meta property="og:title" content="Project 1: Database Structure and SQL Queries" />
+<meta property="og:description" content="Building a whole database using MySqlWorkbench, loading data and run queries" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://samalqarzi.github.io/projects/project1/" />
+<meta property="article:published_time" content="2020-12-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-07T00:00:00+00:00" />
+
+
+    <title>
+  Project 1: Database Structure and SQL Queries · Salem Alqarzi
+</title>
+
+    
+      <link rel="canonical" href="https://samalqarzi.github.io/projects/project1/">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.99fcf616f03ef42db2d568fd2c48b9cc6e1dc2769e9889912ab649c44662b7e9.css" integrity="sha256-mfz2FvA&#43;9C2y1Wj9LEi5zG4dwnaemImRKrZJxEZit&#43;k=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.be7b48ed716e5ddfda899555c8c13c1b0bdb71ff65c87c7a2f6d6f15599a59ab.css" integrity="sha256-vntI7XFuXd/aiZVVyME8Gwvbcf9lyHx6L21vFVmaWas=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.80.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Salem Alqarzi
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blogs/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://samalqarzi.github.io/projects/project1/">
+              Project 1: Database Structure and SQL Queries
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-12-07T00:00:00Z'>
+                December 7, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="project-objective">
+  Project Objective:
+  <a class="heading-link" href="#project-objective">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>The goal of this project is to construct a well-functioning database containing at least 10 tables.
+This database could be for a small business whether real existing organization or simulated business.</p>
+<h1 id="step1--building-database">
+  Step1 : Building database
+  <a class="heading-link" href="#step1--building-database">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Using MySqlWorkbench, me and my team decided to create a database that manages operational
+tasks for an imaginary realty office called (RentWithUS). Operational tasks that include building maintenance,
+furniture procurement and overhead expenses, as well as revenue and rent payment accounting.
+we built a relational database of 10 tables containing personal, descriptive and financial information wether about staff,
+property, residents, revenue , expenses and leases.
+(Building, apartment, residents, expenditure, furniture,
+maintenance, office staff, payment, lease and rent).</p>
+<h3 id="tables">
+  Tables
+  <a class="heading-link" href="#tables">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ol>
+<li><strong>Building:</strong> information about buildings</li>
+<li><strong>Apartment:</strong> information about each apartment</li>
+<li><strong>Residents:</strong> residents personal information</li>
+<li><strong>Expenditure:</strong> expenses and their costs</li>
+<li><strong>Furniture:</strong> furniture types and their conditions and locations</li>
+<li><strong>Maintenance:</strong> maintenance jobs done to the property</li>
+<li><strong>Office staff:</strong> office staff personal information</li>
+<li><strong>Payment:</strong> rent payments</li>
+<li><strong>Lease:</strong> lease types and their time periods</li>
+<li><strong>Rent:</strong> rents amounts depending on the lease type and apartment</li>
+</ol>
+<h3 id="tables-relations">
+  Tables Relations:
+  <a class="heading-link" href="#tables-relations">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Database ERDiagram:</p>
+<figure>
+    <img src="/images/Project1Bg.jpg"/> 
+</figure>
+
+<h1 id="step-2-forward-engineer-the-erdiagram">
+  Step 2: Forward-Engineer the ERDiagram:
+  <a class="heading-link" href="#step-2-forward-engineer-the-erdiagram">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>MySqlWorkbench has a great tool (forward-Engineering) that translates a manually-built ERDiagram into SQL scripts to create the database.
+It basically functions like SQL statements to build the database on the server.</p>
+<h1 id="step-3-generating-and-loading-data">
+  Step 3: Generating and Loading Data
+  <a class="heading-link" href="#step-3-generating-and-loading-data">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Me and my team used <a href="https://www.mockaroo.com/">Mockaroo</a> to generate simulated data. Then we loaded the data to SQL tables using Data Wizard tool in
+MySqlWorkbench.</p>
+<h1 id="step-4-asking-business-questions-and-answer-them-using-sql-scripts">
+  Step 4: Asking Business Questions and Answer them Using SQL Scripts
+  <a class="heading-link" href="#step-4-asking-business-questions-and-answer-them-using-sql-scripts">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h5 id="example">
+  Example:
+  <a class="heading-link" href="#example">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<h6 id="question">
+  Question
+  <a class="heading-link" href="#question">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h6>
+<p>How many Maintenance Jobs were carried each Year per apartment? and what are their total costs? what is the average cost across all jobs?</p>
+<h6 id="script">
+  Script
+  <a class="heading-link" href="#script">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">select</span>  m.ApartmentID,
+        <span style="color:#66d9ef">year</span>(E.Date) <span style="color:#66d9ef">as</span> JobYear,
+        <span style="color:#66d9ef">count</span>(m.MaintenanceID) <span style="color:#66d9ef">as</span> MatJobs,
+        <span style="color:#66d9ef">sum</span>(E.amount) <span style="color:#66d9ef">as</span> totalcost,
+        round((<span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(E.amount)<span style="color:#f92672">/</span><span style="color:#66d9ef">count</span>(m.MaintenanceID) <span style="color:#66d9ef">from</span> Maintenance m
+		 <span style="color:#66d9ef">join</span> Expenditure E <span style="color:#66d9ef">on</span> m.MaintenanceID <span style="color:#f92672">=</span> E.MaintenanceID),<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">as</span> AvgCost
+<span style="color:#66d9ef">from</span> Maintenance m
+<span style="color:#66d9ef">join</span> Expenditure E <span style="color:#66d9ef">on</span> m.MaintenanceID <span style="color:#f92672">=</span> E.MaintenanceID
+<span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> m.ApartmentID, JobYear
+<span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> m.ApartmentID, JobYear;
+</code></pre></div><h1 id="a-taste-of-visualizationpython">
+  A Taste of Visualization(Python):
+  <a class="heading-link" href="#a-taste-of-visualizationpython">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h5 id="showing-number-of-residents-per-gender-for-each-apartment-type-1234-bedrooms">
+  Showing Number of Residents per Gender for each Apartment Type (1,2,3,4 bedrooms)
+  <a class="heading-link" href="#showing-number-of-residents-per-gender-for-each-apartment-type-1234-bedrooms">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<figure>
+    <img src="/images/vis.jpg"/> 
+</figure>
+
+<h5 id="python-script">
+  Python Script:
+  <a class="heading-link" href="#python-script">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">9</span>)) <span style="color:#75715e"># set figure size</span>
+plt<span style="color:#f92672">.</span>bar(resrmfe[<span style="color:#e6db74">&#39;ApartmentType&#39;</span>], resrmfe[<span style="color:#e6db74">&#39;Numberofresidents&#39;</span>], width<span style="color:#f92672">=</span> <span style="color:#ae81ff">0.22</span>,
+            color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Brown&#39;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Female&#39;</span>)  
+plt<span style="color:#f92672">.</span>bar(resrmma[<span style="color:#e6db74">&#39;ApartmentType&#39;</span>], resrmma[<span style="color:#e6db74">&#39;Numberofresidents&#39;</span>], width <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.11</span>,
+            color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Peru&#39;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Male&#39;</span>)<span style="color:#75715e"># set the axes for both geneders</span>
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Apartment Types&#39;</span>, fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>) <span style="color:#75715e"># x label</span>
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Number Of Residents&#39;</span> ,fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>) <span style="color:#75715e"># y label</span>
+plt<span style="color:#f92672">.</span>xticks(resrmma[<span style="color:#e6db74">&#39;ApartmentType&#39;</span>], fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>, rotation <span style="color:#f92672">=</span> <span style="color:#ae81ff">45</span>) <span style="color:#75715e"># set x values</span>
+plt<span style="color:#f92672">.</span>yticks(fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>) <span style="color:#75715e"># font size of y values</span>
+plt<span style="color:#f92672">.</span>legend(fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>) <span style="color:#75715e"># legend lables</span>
+ax<span style="color:#f92672">.</span>set_facecolor(<span style="color:#e6db74">&#34;Honeydew&#34;</span>) <span style="color:#75715e"># color male bars</span>
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Number of Residents Per Apartment&#39;s Type by Gender&#34;</span>, fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>)<span style="color:#f92672">.</span>set_position([<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1.04</span>]) <span style="color:#75715e"># figure title</span>
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><h1 id="all-files-for-this-project-can-be-found-in-the-github-repository-link-below">
+  All files for this Project can be found in the github repository link below:
+  <a class="heading-link" href="#all-files-for-this-project-can-be-found-in-the-github-repository-link-below">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h4 id="go-to-github-repositoryhttpsgithubcomsamalqarzidatabase-creation-withsql">
+  <a href="https://github.com/SamAlqarzi/Database-creation-withSQL">Go to Github Repository</a>
+  <a class="heading-link" href="#go-to-github-repositoryhttpsgithubcomsamalqarzidatabase-creation-withsql">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h3 id="credits-to">
+  Credits To:
+  <a class="heading-link" href="#credits-to">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li><strong>Jack Beck</strong></li>
+<li><strong>Jordan Waldroop</strong></li>
+<li><strong>Cody Rogers</strong></li>
+<li><strong>Isaac Everitt</strong></li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+          2019 -
+        
+        2021
+         Salem Alqarzi 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+    
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "token"}'></script>
+
+
+
+    <script type="application/javascript">
+  var _paq = window._paq = window._paq || [];
+   
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.example.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 'ABCDE']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </body>
+
+</html>

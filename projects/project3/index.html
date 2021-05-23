@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self';">
+    
+
+    <meta name="author" content="Salem Alqarzi">
+    <meta name="description" content="Performed A Series of Analysis for Data Cleaning and Predicted Malware">
+    <meta name="keywords" content="blog,developer,personal, Portfolio">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 3: Microsoft Data For Malware Detection"/>
+<meta name="twitter:description" content="Performed A Series of Analysis for Data Cleaning and Predicted Malware"/>
+
+    <meta property="og:title" content="Project 3: Microsoft Data For Malware Detection" />
+<meta property="og:description" content="Performed A Series of Analysis for Data Cleaning and Predicted Malware" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://samalqarzi.github.io/projects/project3/" />
+<meta property="article:published_time" content="2021-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-28T00:00:00+00:00" />
+
+
+    <title>
+  Project 3: Microsoft Data For Malware Detection · Salem Alqarzi
+</title>
+
+    
+      <link rel="canonical" href="https://samalqarzi.github.io/projects/project3/">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.99fcf616f03ef42db2d568fd2c48b9cc6e1dc2769e9889912ab649c44662b7e9.css" integrity="sha256-mfz2FvA&#43;9C2y1Wj9LEi5zG4dwnaemImRKrZJxEZit&#43;k=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.be7b48ed716e5ddfda899555c8c13c1b0bdb71ff65c87c7a2f6d6f15599a59ab.css" integrity="sha256-vntI7XFuXd/aiZVVyME8Gwvbcf9lyHx6L21vFVmaWas=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.80.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Salem Alqarzi
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/blogs/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://samalqarzi.github.io/projects/project3/">
+              Project 3: Microsoft Data For Malware Detection
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-04-28T00:00:00Z'>
+                April 28, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="project-objective">
+  Project Objective:
+  <a class="heading-link" href="#project-objective">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>The goal of the project is to analyze Microsoft Data which was collected on windows operating devices, to
+to test for the probability that device might be infected by malware based on various properties for each machine.</p>
+<h1 id="dataset">
+  Dataset:
+  <a class="heading-link" href="#dataset">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Me and my team obtained our dataset from <a href="https://www.kaggle.com/lepchenkov/usedcarscatalog">Kaggle</a>.
+Each record in the dataset corresponds to a single windows operating machine and contains a huge list of
+properties for that machine. There are two files to this dataset, one is the train which enfolds all properties for each device and an additional column which classifies whether that particular machine is infected or not ( 1 for infected and 0 for not infected). The objective of the train set is to train the model and validate it with a small batch of that data and then use the model to predict the test set which doesn&rsquo;t have that classification.</p>
+<h1 id="data-preparation">
+  Data Preparation
+  <a class="heading-link" href="#data-preparation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Both datasets are incredibly huge that we encountered so many challenges to operate on them. For our cleaning and visualization we only operated on 1 million records for each dataset. Manny of the columns were full of missing values which we ended up excluding all columns that had almost noted every record null. Another challenge was the format of the columns, the majority of the variables were objects and categorical but there were the ones that came as float with various scales which contained version and serial numbers of each machine. So, we dealt with such columns as categorical since there are none mathematical operations to be performed on them.</p>
+<h1 id="modeling">
+  Modeling
+  <a class="heading-link" href="#modeling">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>For our modeling, we faced some obstacles fitting the whole 1 million train dataset in our RandomForest Classifier model which took a considerable amount of time to complete the process, therefore we had to narrow the dataset to only a quarter of the dataset. Even for the test set we only used a small batch to test the model. For our second model(Logistic Regression Classifier), we used the whole 1 million records dataset to train and then we used the test set to predict malware detection for all machines in the dataset.</p>
+<h1 id="all-files-for-this-project-can-be-found-in-the-github-repository-link-below">
+  All files for this project can be found in the github repository link below:
+  <a class="heading-link" href="#all-files-for-this-project-can-be-found-in-the-github-repository-link-below">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<h4 id="go-to-github-repositoryhttpsgithubcomsamalqarzimicrosoft_malware_detection">
+  <a href="https://github.com/SamAlqarzi/Microsoft_Malware_detection">Go to Github Repository</a>
+  <a class="heading-link" href="#go-to-github-repositoryhttpsgithubcomsamalqarzimicrosoft_malware_detection">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h3 id="credits-to">
+  Credits To:
+  <a class="heading-link" href="#credits-to">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li><strong>Dria Fabrizio</strong></li>
+<li><strong>Renee Gagne</strong></li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+          2019 -
+        
+        2021
+         Salem Alqarzi 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+    
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "token"}'></script>
+
+
+
+    <script type="application/javascript">
+  var _paq = window._paq = window._paq || [];
+   
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.example.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 'ABCDE']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </body>
+
+</html>

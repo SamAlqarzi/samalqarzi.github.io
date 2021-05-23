@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Salem Alqarzi</title>
+    <link>https://samalqarzi.github.io/projects/</link>
+    <description>Recent content in Projects on Salem Alqarzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://samalqarzi.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 4: Household Energy Consumptions</title>
+      <link>https://samalqarzi.github.io/projects/project4/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://samalqarzi.github.io/projects/project4/</guid>
+      <description>Project Objective:    The goal of this project is to test the factors that influence the energy consumption to fluctuate over a particular period of time. Mostly, we are examining how time itself impact power consumption, when do people tend to use more/less power. With such information, we could raise some awareness amongst consumers to help them manage their power usage.
+Dataset:    We acquired our that dataset from UCI Machine Learning Repository at Dataset.</description>
+    </item>
+    
+    <item>
+      <title>Project 3: Microsoft Data For Malware Detection</title>
+      <link>https://samalqarzi.github.io/projects/project3/</link>
+      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://samalqarzi.github.io/projects/project3/</guid>
+      <description>Project Objective:    The goal of the project is to analyze Microsoft Data which was collected on windows operating devices, to to test for the probability that device might be infected by malware based on various properties for each machine.
+Dataset:    Me and my team obtained our dataset from Kaggle. Each record in the dataset corresponds to a single windows operating machine and contains a huge list of properties for that machine.</description>
+    </item>
+    
+    <item>
+      <title>Project 1: Database Structure and SQL Queries</title>
+      <link>https://samalqarzi.github.io/projects/project1/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://samalqarzi.github.io/projects/project1/</guid>
+      <description>Project Objective:    The goal of this project is to construct a well-functioning database containing at least 10 tables. This database could be for a small business whether real existing organization or simulated business.
+Step1 : Building database    Using MySqlWorkbench, me and my team decided to create a database that manages operational tasks for an imaginary realty office called (RentWithUS). Operational tasks that include building maintenance, furniture procurement and overhead expenses, as well as revenue and rent payment accounting.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: Analyzing Used Cars&#39; Data With Rstudio</title>
+      <link>https://samalqarzi.github.io/projects/project2/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://samalqarzi.github.io/projects/project2/</guid>
+      <description>Project Objective:    The goal of this project was to pick a dataset, analyze it, apply it to solve a business problem.
+Picking the Dataset:    Me and my team obtained our dataset from Kaggle. This dataset was collected in 2019 in Belarus (Western Europe), and has about 30 variables (features) most of which are categorical. These variables are decriptive features of the used cars ranging from car models to engine type.</description>
+    </item>
+    
+  </channel>
+</rss>
